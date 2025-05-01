@@ -26,6 +26,17 @@ console.log("======== verifier le type avec Number.isInteger() ( verfie si est u
 console.log(Number.isInteger(10));
 console.log(Number.isInteger(10.5));
 console.log(Number.isInteger("10"));
+document.getElementById("registrationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+  
+    const data = new FormData(this);
+    const values = Object.fromEntries(data.entries());
+  
+    console.log("Form data:", values);
+  
+    
+    alert("Inscription réussie!");
+  });  
 
 
 
