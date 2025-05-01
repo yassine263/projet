@@ -9,5 +9,49 @@
 </head>
 <body>
     <h1>page 1</h1>
+  <div class="form-container">
+    <h2>Formulaire d'inscription</h2>
+    <form id="registrationForm">
+      <label>Nom:</label>
+      <input type="text" name="nom" required>
+
+      <label>Prénom:</label>
+      <input type="text" name="prenom" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Mot de passe:</label>
+      <input type="password" name="password" required>
+
+      <label>Date de naissance:</label>
+      <input type="date" name="dob" required>
+
+      <label>Sexe:</label>
+      <select name="sexe" required>
+        <option value="">--Choisir--</option>
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+      </select>
+
+      <label>Établissement:</label>
+      <input type="text" name="etablissement" required>
+
+      <label>Filière:</label>
+      <input type="text" name="filiere" required>
+
+      <label>Type d'utilisateur:</label>
+      <select name="type_utilisateur" required>
+        <option value="">--Choisir--</option>
+        <option value="etudiant">Étudiant</option>
+        <option value="enseignant">Enseignant</option>
+      </select>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
