@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .exam-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #choices button {
+    margin: 5px 0;
+    background-color: #eee;
+    color: #000;
+    width: 100%;
+  }
+  
+  #choices button.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  #timer {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
