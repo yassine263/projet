@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Création d'examen</title>
+  <link rel="stylesheet" href="create_exam.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Créer un nouvel examen</h1>
+    <form id="exam-form">
+      <label for="title">Titre :</label><br>
+      <input type="text" id="title" required /><br><br>
+
+      <label for="description">Description :</label><br>
+      <textarea id="description" required></textarea><br><br>
+
+      <label for="public">Public ciblé :</label><br>
+      <input type="text" id="public" placeholder="ex: 2e année MIP, S4, groupe A" required /><br><br>
+
+      <button type="submit">Générer le lien d'accès</button>
+    </form>
+
+    <div id="exam-link" class="hidden">
+      <p>Lien d'accès unique :</p>
+      <input type="text" id="link" readonly />
+      <button onclick="copyLink()">Copier le lien</button>
+    </div>
+
+    <br><br>
+
+    <div id="question-section" class="hidden">
+      <h2>Ajouter des questions</h2>
+      <button onclick="showQuestionForm('qcm')">Ajouter un QCM</button>
+      <button onclick="showQuestionForm('direct')">Ajouter une question directe</button>
+      <br><br>
+
+      <div id="question-form-container"></div>
+
+      <h3>Questions ajoutées :</
