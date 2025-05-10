@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Examen Étudiant</title>
+  <link rel="stylesheet" href="exam.css" />
+</head>
+<body>
+  
+  <div class="exam-container" id="geo-section">
+    <h2>Avant de commencer l'examen</h2>
+    <p>Veuillez activer la géolocalisation.</p>
+    <button onclick="startGeolocation()">Activer la géolocalisation</button>
+  </div>
+
+
+  <div class="exam-container hidden" id="exam-section">
+    <h2 id="question-title"></h2>
+    <div id="question-text"></div>
+    <div id="choices"></div>
+    <div id="timer">Temps restant : <span id="time">10</span>s</div>
+    <button onclick="nextQuestion()">Suivant</button>
+  </div>
+
+ 
+  <div class="exam-container hidden" id="result-section">
+    <h2>Examen terminé</h2>
+    <p>Votre score : <span id="score"></span>/100</p>
+  </div>
+
+  <script src="exam.js"></script>
+</body>
+</html>
