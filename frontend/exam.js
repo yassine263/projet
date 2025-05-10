@@ -1,9 +1,5 @@
 
 const token = localStorage.getItem('token');
-if (!token) {
-  alert("Veuillez vous connecter d'abord.");
-  window.location.href = "login.html";
-}
 
 const questions = [
   {
@@ -90,7 +86,7 @@ function startTimer() {
   }, 1000);
 }
 
-// --- Passer à la question suivante
+
 function nextQuestion() {
   clearInterval(timer);
 
@@ -112,3 +108,4 @@ function showResult() {
   document.getElementById("result-section").classList.remove("hidden");
   document.getElementById("score").textContent = score;
 }
+
