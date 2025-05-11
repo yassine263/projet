@@ -1,40 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Création d'examen</title>
-  <link rel="stylesheet" href="create_exam.css" />
+  <title>Gestion des examens</title>
+  <link rel="stylesheet" href="creat_exam.css" />
+  <style>
+    .hidden { display: none; }
+    .tab-button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .active-tab {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Créer un nouvel examen</h1>
-    <form id="exam-form">
-      <label for="title">Titre :</label><br>
-      <input type="text" id="title" required /><br><br>
+    <h1>Gestion des examens</h1>
 
-      <label for="description">Description :</label><br>
-      <textarea id="description" required></textarea><br><br>
-
-      <label for="public">Public ciblé :</label><br>
-      <input type="text" id="public" placeholder="ex: 2e année MIP, S4, groupe A" required /><br><br>
-
-      <button type="submit">Générer le lien d'accès</button>
-    </form>
-
-    <div id="exam-link" class="hidden">
-      <p>Lien d'accès unique :</p>
-      <input type="text" id="link" readonly />
-      <button onclick="copyLink()">Copier le lien</button>
+    
+    <div>
+      <button class="tab-button active-tab" onclick="switchTab('create')">Créer un examen</button>
+      <button class="tab-button" onclick="switchTab('view')">Voir les examens</button>
+      <button class="tab-button" onclick="switchTab('manage')">Gérer les examens</button>
     </div>
 
-    <br><br>
+    <hr>
 
-    <div id="question-section" class="hidden">
-      <h2>Ajouter des questions</h2>
-      <button onclick="showQuestionForm('qcm')">Ajouter un QCM</button>
-      <button onclick="showQuestionForm('direct')">Ajouter une question directe</button>
+   
+    <div id="tab-create">
+      <form id="exam-form">
+        <label for="title">Titre :</label><br>
+        <input type="text" id="title" required /><br><br>
+
+        <label for="description">Description :</label><br>
+        <textarea id="description" required></textarea><br><br>
+
+        <label for="public">Public ciblé :</label><br>
+        <input type="text" id="public" placeholder="ex: 2e année MIP, S4, groupe A" required /><br><br>
+
+        <button type="submit">Générer le lien d'accès</button>
+      </form>
+
+      <div id="exam-link" class="hidden">
+        <p>Lien d'accès unique :</p>
+        <input type="text" id="link" readonly />
+        <button onclick="copyLink()">Copier le lien</button>
+      </div>
+
       <br><br>
 
-      <div id="question-form-container"></div>
+      <div id="question-section" class="hidden">
+        <h2>Ajouter des questions</h2>
+        <button onclick="showQuestionForm('qcm')">Ajouter un QCM</button>
+        <button onclick="showQuestionForm('direct')">Ajouter une question directe</button>
+        <br><br>
 
-      <h3>Questions ajoutées :</h3>
+        <div id="question-form-container"></div>
+
+        <h3>Questions ajoutées :</h3>
+        <ul id="question-list"></ul>
+
+        <br>
+        <button id="save-exam">✅ Enregistrer l'examen</button>
+      </div>
+    </div>
+
+   
+    <div id="tab-view" class="hidden">
+      <h2>Examens créés</h2>
+      <ul id="exam-list">
+        
+        <li>Examen 1 - [Accéder]</li>
+        <li>Examen 2 - [Accéder]</li>
+       
+      </ul>
+    </div>
+
+
+    <div id="tab-manage" class="hidden">
+      <h2>Gérer les examens</h2>
+      <p>Fonctionnalités à venir : modifier, supprimer, publier les examens, etc.</p>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tab) {
+      const tabs = ['create', 'view', 'manage'];
+      tabs.forEach(t => {
+        document.getElementById('tab-' + t).classList.add('hidden');
+        document.querySelector(`.tab-button[onclick="switchTab('${t}')"]`).classList.remove('active-tab');
+      });
+      document.getElementById('tab-' + tab).classList.remove('hidden');
+      document.querySelector(`.tab-button[onclick="switchTab('${tab}')"]`).classList.add('active-tab');
+    }
+
+    function copyLink() {
+      const link = document.getElementById("link");
+      link.select();
+      document.execCommand("copy");
+      alert("Lien copié !");
+    }
+
+    
+  </script>
+
+  <script src="creat_exam.js"></script>
+</body>
+</html>
+

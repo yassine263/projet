@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,9 +12,17 @@
     <form id="loginForm">
       <input type="email" id="email" placeholder="Email" required />
       <input type="password" id="password" placeholder="Mot de passe" required />
+
+    
+      <select id="role" required>
+        <option value="">-- Sélectionnez un rôle --</option>
+        <option value="etudiant">Étudiant</option>
+        <option value="enseignant">Enseignant</option>
+      </select>
+
       <button type="submit">Se connecter</button>
     </form>
-    <div id="error-message"></div>
+    <div id="error-message" style="color:red;"></div>
   </div>
   <script src="login.js"></script>
 </body>

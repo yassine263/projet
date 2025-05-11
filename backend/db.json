@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "id": 1746995587841,
+    "title": "css",
+    "description": "ka...",
+    "publicTarget": "s3",
+    "link": "https://examplatform.com/exam/1746995587841",
+    "questions": [
+      {
+        "type": "qcm",
+        "enonce": "comment .....",
+        "note": 3,
+        "duree": 199,
+        "media": null,
+        "options": [
+          "a,b.c"
+        ],
+        "correct": [
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1746995751942,
+    "title": "mathematique",
+    "description": "hhhfh",
+    "publicTarget": "s3",
+    "link": "https://examplatform.com/exam/1746995751942",
+    "questions": [
+      {
+        "type": "direct",
+        "enonce": "comment",
+        "note": 2,
+        "duree": 222,
+        "media": null,
+        "reponse": "css",
+        "tolerance": 1
+      }
+    ]
+  },
+  {
+    "id": 1746996431189,
+    "title": "info",
+    "description": "ddd",
+    "publicTarget": "s3",
+    "link": "https://examplatform.com/exam/1746996431189",
+    "questions": [
+      {
+        "type": "qcm",
+        "enonce": "commm",
+        "note": 3,
+        "duree": 60,
+        "media": null,
+        "options": [
+          "a,b.c"
+        ],
+        "correct": [
+          null
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1746998274487,
+    "title": "math",
+    "description": ".....",
+    "publicTarget": "mip s4",
+    "link": "https://examplatform.com/exam/1746998274487",
+    "questions": [
+      {
+        "type": "direct",
+        "enonce": "m.....",
+        "note": 3,
+        "duree": 300000,
+        "media": null,
+        "reponse": "a",
+        "tolerance": 2
+      }
+    ]
+  }
+]
